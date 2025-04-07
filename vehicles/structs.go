@@ -7,27 +7,27 @@ import (
 )
 
 type VehicleData struct {
-	ID                    int64     `json:"id"`
-	ImageLocation         string    `json:"imageLocation"`
-	Year                  int64     `json:"year"`
-	Make                  string    `json:"make"`
-	Model                 string    `json:"model"`
-	LicensePlate          string    `json:"licensePlate"`
+	ID                    int64     `json:"id,omitempty"`
+	ImageLocation         string    `json:"imageLocation,omitempty"`
+	Year                  int64     `json:"year,omitempty"`
+	Make                  string    `json:"make,omitempty"`
+	Model                 string    `json:"model,omitempty"`
+	LicensePlate          string    `json:"licensePlate,omitempty"`
 	PurchaseDate          time.Time `json:"purchaseDate,omitempty"`
 	SoldDate              time.Time `json:"soldDate,omitempty"`
-	PurchasePrice         float64   `json:"purchasePrice"`
-	SoldPrice             float64   `json:"soldPrice"`
-	IsElectric            bool      `json:"isElectric"`
-	IsDiesel              bool      `json:"isDiesel"`
-	UseHours              bool      `json:"useHours"`
-	OdometerOptional      bool      `json:"odometerOptional"`
-	ExtraFields           []string  `json:"extraFields"`
-	Tags                  []string  `json:"tags"`
-	HasOdometerAdjustment bool      `json:"hasOdometerAdjustment"`
-	OdometerMultiplier    int64     `json:"odometerMultiplier"`
-	OdometerDifference    int64     `json:"odometerDifference"`
-	DashboardMetrics      []int64   `json:"dashboardMetrics"`
-	VehicleIdentifier     string    `json:"vehicleIdentifier"`
+	PurchasePrice         float64   `json:"purchasePrice,omitempty"`
+	SoldPrice             float64   `json:"soldPrice,omitempty"`
+	IsElectric            bool      `json:"isElectric,omitempty"`
+	IsDiesel              bool      `json:"isDiesel,omitempty"`
+	UseHours              bool      `json:"useHours,omitempty"`
+	OdometerOptional      bool      `json:"odometerOptional,omitempty"`
+	ExtraFields           []string  `json:"extraFields,omitempty"`
+	Tags                  []string  `json:"tags,omitempty"`
+	HasOdometerAdjustment bool      `json:"hasOdometerAdjustment,omitempty"`
+	OdometerMultiplier    int64     `json:"odometerMultiplier,omitempty"`
+	OdometerDifference    int64     `json:"odometerDifference,omitempty"`
+	DashboardMetrics      []int64   `json:"dashboardMetrics,omitempty"`
+	VehicleIdentifier     string    `json:"vehicleIdentifier,omitempty"`
 }
 
 func convertAll(inx []map[string]interface{}) ([]VehicleData, error) {

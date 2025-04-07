@@ -7,12 +7,12 @@ import (
 )
 
 type Reminder struct {
-	Description string    `json:"description"`
-	Urgency     string    `json:"urgency"`
-	Metric      string    `json:"metric"`
-	Notes       string    `json:"notes"`
-	DueDate     time.Time `json:"dueDate"`
-	DueOdometer int64     `json:"dueOdometer"`
+	Description string    `json:"description,omitempty"`
+	Urgency     string    `json:"urgency,omitempty"`
+	Metric      string    `json:"metric,omitempty"`
+	Notes       string    `json:"notes,omitempty"`
+	DueDate     time.Time `json:"dueDate,omitempty"`
+	DueOdometer int64     `json:"dueOdometer,omitempty"`
 }
 
 func ConvertSingle(x interface{}) Reminder {

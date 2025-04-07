@@ -7,14 +7,14 @@ import (
 )
 
 type TaxRecord struct {
-	ID          int64     `json:"id,omitempty"`
-	Date        time.Time `json:"date"`
-	Description string    `json:"description"`
-	Notes       string    `json:"notes"`
-	Cost        float64   `json:"cost"`
-	Tags        string    `json:"tags"`
-	ExtraFields []string  `json:"extraFields"`
-	Files       []string  `json:"files"`
+	ID          int64     `json:"id,omitempty,omitempty"`
+	Date        time.Time `json:"date,omitempty"`
+	Description string    `json:"description,omitempty"`
+	Notes       string    `json:"notes,omitempty"`
+	Cost        float64   `json:"cost,omitempty"`
+	Tags        string    `json:"tags,omitempty"`
+	ExtraFields []string  `json:"extraFields,omitempty"`
+	Files       []string  `json:"files,omitempty"`
 }
 
 func convertSingle(in map[string]interface{}) TaxRecord {
