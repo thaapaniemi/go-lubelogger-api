@@ -113,6 +113,7 @@ func testServiceRecords(c client.Client, vehicleId int64) {
 		Date:        time.Now(),
 		Description: "description",
 		Notes:       "test note",
+		Cost:        25.99,
 	}
 	err := new.Add(ctx, c, vehicleId)
 	if err != nil {
@@ -153,6 +154,7 @@ func testRepairRecords(c client.Client, vehicleId int64) {
 		Date:        time.Now(),
 		Description: "description",
 		Notes:       "test note",
+		Cost:        31.99,
 	}
 	err := new.Add(ctx, c, vehicleId)
 	if err != nil {
@@ -193,6 +195,7 @@ func testUpgradeRecords(c client.Client, vehicleId int64) {
 		Date:        time.Now(),
 		Description: "description",
 		Notes:       "test note",
+		Cost:        55.44,
 	}
 	err := new.Add(ctx, c, vehicleId)
 	if err != nil {
@@ -232,6 +235,7 @@ func testTaxRecords(c client.Client, vehicleId int64) {
 		Date:        time.Now(),
 		Description: "description",
 		Notes:       "test note",
+		Cost:        99.00,
 	}
 	err := new.Add(ctx, c, vehicleId)
 	if err != nil {
@@ -271,6 +275,7 @@ func testGasRecords(c client.Client, vehicleId int64) {
 		Odometer:     999000,
 		FuelConsumed: 7,
 		IsFillToFull: true,
+		MissedFuelUp: true,
 		Cost:         15,
 		Date:         time.Now(),
 		Description:  "description",
