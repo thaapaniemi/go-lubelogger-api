@@ -7,27 +7,27 @@ import (
 )
 
 type VehicleInfo struct {
-	VehicleData               vehicles.VehicleData `json:"vehicleData"`
-	VeryUrgentReminderCount   int64                `json:"veryUrgentReminderCount"`
-	UrgentReminderCount       int64                `json:"urgentReminderCount"`
-	NotUrgentReminderCount    int64                `json:"notUrgentReminderCount"`
-	PastDueReminderCount      int64                `json:"pastDueReminderCount"`
-	NextReminder              reminders.Reminder   `json:"nextReminder"`
-	ServiceRecordCount        int64                `json:"serviceRecordCount"`
-	ServiceRecordCost         float64              `json:"serviceRecordCost"`
-	RepairRecordCount         int64                `json:"repairRecordCount"`
-	RepairRecordCost          float64              `json:"repairRecordCost"`
-	UpgradeRecordCount        int64                `json:"upgradeRecordCount"`
-	UpgradeRecordCost         float64              `json:"upgradeRecordCost"`
-	TaxRecordCount            int64                `json:"taxRecordCount"`
-	TaxRecordCost             float64              `json:"taxRecordCost"`
-	GasRecordCount            int64                `json:"gasRecordCount"`
-	GasRecordCost             float64              `json:"gasRecordCost"`
-	LastReportedOdometer      int64                `json:"lastReportedOdometer"`
-	PlanRecordBackLogCount    int64                `json:"planRecordBackLogCount"`
-	PlanRecordInProgressCount int64                `json:"planRecordInProgressCount"`
-	PlanRecordTestingCount    int64                `json:"planRecordTestingCount"`
-	PlanRecordDoneCount       int64                `json:"planRecordDoneCount"`
+	VehicleData               vehicles.VehicleData `json:"vehicleData,omitempty"`
+	VeryUrgentReminderCount   int64                `json:"veryUrgentReminderCount,omitempty"`
+	UrgentReminderCount       int64                `json:"urgentReminderCount,omitempty"`
+	NotUrgentReminderCount    int64                `json:"notUrgentReminderCount,omitempty"`
+	PastDueReminderCount      int64                `json:"pastDueReminderCount,omitempty"`
+	NextReminder              reminders.Reminder   `json:"nextReminder,omitempty"`
+	ServiceRecordCount        int64                `json:"serviceRecordCount,omitempty"`
+	ServiceRecordCost         float64              `json:"serviceRecordCost,omitempty"`
+	RepairRecordCount         int64                `json:"repairRecordCount,omitempty"`
+	RepairRecordCost          float64              `json:"repairRecordCost,omitempty"`
+	UpgradeRecordCount        int64                `json:"upgradeRecordCount,omitempty"`
+	UpgradeRecordCost         float64              `json:"upgradeRecordCost,omitempty"`
+	TaxRecordCount            int64                `json:"taxRecordCount,omitempty"`
+	TaxRecordCost             float64              `json:"taxRecordCost,omitempty"`
+	GasRecordCount            int64                `json:"gasRecordCount,omitempty"`
+	GasRecordCost             float64              `json:"gasRecordCost,omitempty"`
+	LastReportedOdometer      int64                `json:"lastReportedOdometer,omitempty"`
+	PlanRecordBackLogCount    int64                `json:"planRecordBackLogCount,omitempty"`
+	PlanRecordInProgressCount int64                `json:"planRecordInProgressCount,omitempty"`
+	PlanRecordTestingCount    int64                `json:"planRecordTestingCount,omitempty"`
+	PlanRecordDoneCount       int64                `json:"planRecordDoneCount,omitempty"`
 }
 
 func convertSingle(in map[string]interface{}) VehicleInfo {
