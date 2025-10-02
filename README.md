@@ -58,6 +58,7 @@ func main(){
 lubelogger:func NewClient(endpoint, username, password string) client.Client
 
 odometer:func GetRecords(ctx context.Context, c client.Client, vehicleId int64) ([]OdometerRecord, error)
+odometer:func GetLatestValue(ctx context.Context, c client.Client, vehicleId int64) (int64, error)
 odometer:func (o OdometerRecord) Add(ctx context.Context, c client.Client, vehicleId int64) error
 odometer:func (o OdometerRecord) Update(ctx context.Context, c client.Client) error
 odometer:func (o OdometerRecord) Delete(ctx context.Context, c client.Client) error
@@ -95,7 +96,7 @@ gasrecords:func (o GasRecord) Delete(ctx context.Context, c client.Client) error
 
 calendar:func GetCalendar(ctx context.Context, c client.Client) (string, error)
 
-document:func (o Document) Upload(ctx context.Context, c client.Client) error
+document:func (o Document) Upload(ctx context.Context, c client.Client) (string, error)
 
 root:func MakeBackup(ctx context.Context, c client.Client) ([]byte, error)
 root:func Cleanup(ctx context.Context, c client.Client) ([]byte, error)
