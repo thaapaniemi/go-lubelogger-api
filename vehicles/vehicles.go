@@ -23,7 +23,10 @@ func GetRecords(ctx context.Context, c client.Client) ([]VehicleData, error) {
 	}
 
 	var response []map[string]interface{}
-	c.Decode(raw, &response)
+	err = c.Decode(raw, &response)
+	if err != nil {
+		return nil, err
+	}
 
 	out, err := convertAll(response)
 	return out, err
