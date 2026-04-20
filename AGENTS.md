@@ -245,6 +245,7 @@ When contributing to this project:
 6. **Documentation**: Update README.md with new API functions
 7. **No breaking changes**: This is an early-stage project, but avoid unnecessary API changes
 8. **Error context**: Include meaningful error messages with context
+9. **Commit discipline**: Housekeeping changes (e.g., `.gitignore` updates) should be in standalone chore commits, not bundled with functional fixes. This keeps the git history clean and makes it easier to revert housekeeping changes independently.
 
 ## Known Issues & Limitations
 

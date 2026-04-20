@@ -9,7 +9,6 @@ Required lubelogger version: v1.4.6 due the [usage of culture-invariant API](htt
 
 This is an early development version, there will be rough edges, conversion errors and breaking changes.
 
-
 ## Installation
 Required go version: 1.11
 
